@@ -2,7 +2,7 @@
 #include <math.h>
 #include <string.h>
 
-//CHAMADA DAS FUN«’ES UTILIZADAS
+//CHAMADA DAS FUN√á√ïES UTILIZADAS
 int converterBin2Dec(long long valor_binario);
 long long converterDec2Bin(int valor_decimal);
 int converterDec2Oct(int valor_decimal);
@@ -20,9 +20,9 @@ int main()
     int sequencial, valor_temp, tamanho_string;
     char valor_hexa[100];
 
-    //ENQUANTO FOR A OPCAO 1 EXECUTA NOVAMENTE, SE FOR DIFERENTE DE 1 SISTEMA … FINALIZADO
+    //ENQUANTO FOR A OPCAO 1 EXECUTA NOVAMENTE, SE FOR DIFERENTE DE 1 SISTEMA √â FINALIZADO
      while (opcao2 = 1) {
-        //mOSTA O MENUM PRINCIPAL
+        //MOSTRA O MENUM PRINCIPAL
         printf("\n----------------------\n");
         printf("##BEM VINDO AO CONVERSOR DE BASES!##\n");
         printf("\nDigite a Opcao de conversao desejada\n");
@@ -35,41 +35,41 @@ int main()
         scanf("%c", &opcao);
         getchar();
 
-        //OP«√O 0 - FECHA O SISTEMA
+        //OP√á√ÉO 0 - FECHA O SISTEMA
         if (opcao == '0') {
         printf("Clique em ENTER e o sistema sera finalizado\n");
             opcao2 = 2;
             exit(0);
         }
 
-        //OP«√O 1 - BIN¡RIO -> DECIMAL
+        //OP√á√ÉO 1 - BIN√ÅRIO -> DECIMAL
         else if (opcao == '1') {
             printf("Digite numero binario: ");
             scanf("%lld", &valor_binario);
             printf("[%lld] em binario = [%d] em decimal\n", valor_binario, converterBin2Dec(valor_binario));
         }
 
-        //OP«√O 2 - DECIMAL -> BIN¡RIO
+        //OP√á√ÉO 2 - DECIMAL -> BIN√ÅRIO
         else if (opcao == '2') {
             printf("Digite o numero decimal: ");
             scanf("%d", &valor_decimal);
             printf("[%d] em decimal = [%lld] em binario\n", valor_decimal, converterDec2Bin(valor_decimal));
         }
 
-        //OP«√O 3 - DECIMAL -> OCTAL
+        //OP√á√ÉO 3 - DECIMAL -> OCTAL
         else if (opcao == '3') {
             printf("Digite o numero decimal: ");
             scanf("%d", &valor_decimal);
             printf("[%d] em decimal = [%d] em octal\n", valor_decimal, converterDec2Oct(valor_decimal));
         }
 
-        //OP«√O 4 - OCTAL -> DECIMAL
+        //OP√á√ÉO 4 - OCTAL -> DECIMAL
         else if (opcao == '4') {
             printf("Digite o numero octal: ");
             scanf("%d", &valor_octal);
             printf("[%d] em octal = [%lld] em decimal\n", valor_octal, converterOct2Dec(valor_octal));
         }
-        //OP«√O DESCONHECIDAO
+        //OP√á√ÉO DESCONHECIDAO
         else {
             printf("Opcao desconhecida[%c]\n", opcao);
         }
@@ -84,16 +84,16 @@ int converterBin2Dec(long long valor_binario)
 {
     int valor_decimal = 0, sequencial = 0, resto;
 
-    //ENQUANTO EXISTIR VALOR NO BIN¡RIO
+    //ENQUANTO EXISTIR VALOR NO BIN√ÅRIO
     while (valor_binario != 0)
     {
-        //PEGA O RESTO DA DIVIS√O DO VALOR POR 10
+        //PEGA O RESTO DA DIVIS√ÉO DO VALOR POR 10
         resto = valor_binario % 10;
 
         //DIVIDE O VALOR BINARIO POR 10
         valor_binario /= 10;
 
-        //INCREMENTA O VALOR DECIMAL COM O RESTO DA DIVIS√O MULTIPLICANDO POR 2 ELEVADO AO SEQUENCIAL
+        //INCREMENTA O VALOR DECIMAL COM O RESTO DA DIVIS√ÉO MULTIPLICANDO POR 2 ELEVADO AO SEQUENCIAL
         valor_decimal += resto * pow(2, sequencial);
 
         //INCREMENTA A SEQUENCIAL
@@ -118,7 +118,7 @@ long long converterDec2Bin(int valor_decimal)
         //DIVIDE O VALOR DECIMAL POR 2
         valor_decimal /= 2;
 
-        //INCREMENTA O VALOR BIN¡RIO, MULTIPLICANDO O RESTO DA DIVISAO PELO SEQUENCIAL
+        //INCREMENTA O VALOR BIN√ÅRIO, MULTIPLICANDO O RESTO DA DIVISAO PELO SEQUENCIAL
         valor_binario += resto * sequencial;
 
         //MULTIPLICANDO O SEQUENCIAL POR 10
@@ -139,7 +139,7 @@ int converterDec2Oct(int valor_decimal)
         //INCREMENTA O VALOR OCTAL COM O RESTO DA DIVISAO DO DECIMAL POR 8  MULTIPLICANDO PELO SEQUENCIAL
         valor_octal += (valor_decimal % 8) * sequencia;
 
-        //O VALOR DECIMAL SER¡ DIVIDIDO POR 8
+        //O VALOR DECIMAL SER√Å DIVIDIDO POR 8
         valor_decimal /= 8;
 
         //O SEQUENCIAL SERA MULTIPLICADO POR 10
@@ -157,7 +157,7 @@ long long converterOct2Dec(int valor_octal)
     //ENQUANTO O VALOR OCTAL FOR DIFERENTE DE ZERO
     while(valor_octal != 0)
     {
-        //INCREMENTA O VALOR DECIMAL COM O RESTO DA DIVIS√O DO VALOR OCTAL POR 10 MULTIPLICADO POR 8 ELEVADO PELO SEQUENCIAL
+        //INCREMENTA O VALOR DECIMAL COM O RESTO DA DIVIS√ÉO DO VALOR OCTAL POR 10 MULTIPLICADO POR 8 ELEVADO PELO SEQUENCIAL
         valor_decimal += (valor_octal % 10) * pow(8, sequencia);
 
         //INCREMENTA O SEQUENCIAL
