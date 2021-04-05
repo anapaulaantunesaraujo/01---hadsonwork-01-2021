@@ -22,7 +22,7 @@ int main()
 
     //ENQUANTO FOR A OPCAO 1 EXECUTA NOVAMENTE, SE FOR DIFERENTE DE 1 SISTEMA É FINALIZADO
      while (opcao2 = 1) {
-        //mOSTA O MENUM PRINCIPAL
+        //MOSTRA O MENUM PRINCIPAL
         printf("\n----------------------\n");
         printf("##BEM VINDO AO CONVERSOR DE BASES!##\n");
         printf("\nDigite a Opcao de conversao desejada\n");
